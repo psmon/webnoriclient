@@ -1,0 +1,70 @@
+<div class="topempty"></div>
+<div class="panel panel-default " >
+    <div class="alert alert-danger" role="alert" ng-if="bonusData.bonusPoint>0">{{dic.api.daybonus}}(+{{bonusData.bonusPoint}}Point / +{{bonusData.bonusCoins}}Coin ) </div>
+    <div class="panel-body">
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{lang.home.introtitle}}</div>
+            <div class="panel-body">
+                <p>{{lang.home.intro}}</p>
+                <p>{{lang.home.introwish}}</p>
+                <p>{{lang.home.gameprogressex}}</p>
+                <ul>
+                    <li>{{lang.home.gameprogressex1}}</li>
+                    <li>{{lang.home.gameprogressex2}}</li>
+                    <li>{{lang.home.gameprogressex3}}</li>
+                </ul>
+
+                <p>{{lang.dic.gameType}}</p>
+                <ul>
+                    <li>{{lang.home.gameTabMemo}}</li>
+                    <li>{{lang.home.mysocialTabMemo}}</li>
+                </ul>
+
+
+                <p>{{lang.dic.gameRefer}}</p>
+                <ul>
+                    <li>{{lang.dic.handGameName}}</li>
+                    <li>{{lang.dic.iHoldemGameName}}</li>
+                    <li>{{lang.dic.etcGameName}}</li>
+                </ul>
+
+                <p>{{lang.home.bonusMemo1}}</p>
+                <ol>
+                    <li>{{lang.home.bonusMemo2}}</li>
+                </ol>
+                <p>{{lang.home.bonusMemo3}}
+                </p>
+                <ol>
+                    <li>{{lang.home.bonusMemo4}}</li>
+                    <li>{{lang.home.bonusMemo5}}</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">{{lang.dic.leaderBoard}}</div>
+            <div class="panel-body">
+                <p>{{handRank.currentMonth}} {{lang.home.handGameRank}}</p>
+                <ol>
+                    <li ng-repeat="rankinfo in handRank.list"><img class="user_medal_small" ng-src="{{rankinfo.picurl}}"  />{{rankinfo.nick}}({{rankinfo.earnPointTotal}}point)</li>
+                </ol>
+            </div>
+
+            <div class="panel-body">
+                <p>{{iholRank.currentMonth}} {{lang.home.iHGameRank}}</p>
+                <ol>
+                    <li ng-repeat="rankinfo in iholRank.list"><img class="user_medal_small" ng-src="{{rankinfo.picurl}}"  />{{rankinfo.nick}}({{rankinfo.earnPointTotal}}point)</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">{{lang.dic.reqAdward}}</div>
+            <div class="panel-body">
+                {{lang.dic.reqAdwardMemo}}
+                <p>{{lang.dic.reqAdwardAddr}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<img class="img-rounded" width="{{windowWidth}}px" src="/img/widelogo.jpg" />

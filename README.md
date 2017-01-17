@@ -1,3 +1,3 @@
 # webnoriclient
 
-game.webnori.com
+http://game.webnori.com
